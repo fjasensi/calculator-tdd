@@ -11,4 +11,9 @@ class CalculatorSpec extends AnyFlatSpec with Matchers {
     val calculator = new Calculator
     calculator.subtract(10.5, 4.5) shouldEqual 6
   }
+
+  it should "multiplicar dos números correctamente" in {
+    val calculator = new Calculator
+    calculator.multiply(2, 5) shouldEqual 10
+  }
 }
