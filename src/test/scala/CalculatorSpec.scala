@@ -21,4 +21,9 @@ class CalculatorSpec extends AnyFlatSpec with Matchers {
     val calculator = new Calculator
     calculator.divide(10, 2) shouldEqual 5
   }
+
+  it should "lanzar ArithmeticException cuando dividimos por 0" in {
+    val calculator = new Calculator
+    an[ArithmeticException] should be thrownBy calculator.divide(10, 0)
+  }
 }
