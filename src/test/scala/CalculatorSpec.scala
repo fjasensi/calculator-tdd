@@ -16,4 +16,9 @@ class CalculatorSpec extends AnyFlatSpec with Matchers {
     val calculator = new Calculator
     calculator.multiply(2, 5) shouldEqual 10
   }
+
+  it should "dividir dos números correctamente" in {
+    val calculator = new Calculator
+    calculator.divide(10, 2) shouldEqual 5
+  }
 }
