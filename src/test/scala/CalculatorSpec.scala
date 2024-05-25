@@ -27,11 +27,19 @@ class CalculatorSpec extends AnyFlatSpec with Matchers {
     an[ArithmeticException] should be thrownBy calculator.divide(10, 0)
   }
 
-  it should "calcular la raíz cuadrada de un número con precisión 0.001" in {
+  it should "calcular la raíz cuadrada de 2 con precisión 0.001" in {
     val calculator = new Calculator
     val result = calculator.sqrt(2)
     val expectedResult = 1.414213562
     
+    result shouldEqual expectedResult +- 0.001
+  }
+
+  it should "calcular la raíz cuadrada de 10 con precisión 0.001" in {
+    val calculator = new Calculator
+    val result = calculator.sqrt(10)
+    val expectedResult = 3.16227766
+
     result shouldEqual expectedResult +- 0.001
   }
   
